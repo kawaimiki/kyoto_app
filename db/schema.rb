@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_29_214608) do
+ActiveRecord::Schema.define(version: 2021_09_02_135817) do
 
   create_table "spots", force: :cascade do |t|
     t.string "name"
     t.string "comment"
     t.string "address"
     t.integer "tel"
-    t.integer "price"
+    t.string "price"
     t.string "parking"
-    t.string "access"
+    t.text "access"
     t.string "url"
     t.integer "category"
     t.datetime "created_at", null: false

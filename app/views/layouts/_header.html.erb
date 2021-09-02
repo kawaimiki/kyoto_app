@@ -1,5 +1,33 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <%= link_to 'KYOTO App', root_path, class: "navbar-brand" %>
+  <%= link_to 'KYOTO', root_path, class: "navbar-brand" %>
+  
+  <div class="dropdown">
+  <!-- 切替ボタンの設定 -->
+  <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    インスタ映え
+  </button>
+  <!-- ドロップメニューの設定 -->
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">カラフル</a>
+    <a class="dropdown-item" href="#">動物みくじ</a>
+    <a class="dropdown-item" href="#">水占い</a>
+    <a class="dropdown-item" href="#">花手水</a>
+  </div><!-- /.dropdown-menu -->
+</div><!-- /.dropdown -->
+  
+  <div class="dropdown">
+  <!-- 切替ボタンの設定 -->
+  <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    楽しめる
+  </button>
+  <!-- ドロップメニューの設定 -->
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">雨の日</a>
+    <a class="dropdown-item" href="#">子ども</a>
+    <a class="dropdown-item" href="#">車椅子</a>
+  </div><!-- /.dropdown-menu -->
+</div><!-- /.dropdown -->
+
   <button
     class="navbar-toggler"
     type="button"
