@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_02_135817) do
+ActiveRecord::Schema.define(version: 2021_09_05_004320) do
 
   create_table "spots", force: :cascade do |t|
     t.string "name"
     t.string "comment"
     t.string "address"
-    t.integer "tel"
+    t.string "tel"
     t.string "price"
     t.string "parking"
     t.text "access"
