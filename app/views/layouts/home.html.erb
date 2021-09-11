@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KYOTO App</title>
+    <title>KYOTO</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,8 +13,24 @@
     <%= render "layouts/flash" %>
     <main class="bg-home d-flex align-items-center w-100 h-100">
       <div class="container">
+
         <%= yield %>
+     <div class="loopSlide">
+  <ul>
+    <li><a href="#"><img src="https://souda-kyoto.jp/blog/ea410e0000000rlo-img/01_1.jpg" alt=""></a></li>
+    <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Kinkaku-ji_2015.JPG" alt=""></a></li>
+    <li><a href="#"><img src="https://kawaii-kyoto.net/wp-content/uploads/2018/12/youkokuji7.jpg" alt=""></a></li>
+    <li><a href="#"><img src="https://www.gct.co.jp/kyoto/kanko/_src/15474/img20190629222831134997.png" alt=""></a></li>
+  </ul>
+  <ul>
+    <li><a href="#"><img src="https://souda-kyoto.jp/blog/ea410e0000000rlo-img/01_1.jpg" alt=""></a></li>
+    <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Kinkaku-ji_2015.JPG" alt=""></a></li>
+    <li><a href="#"><img src="https://kawaii-kyoto.net/wp-content/uploads/2018/12/youkokuji7.jpg" alt=""></a></li>
+    <li><a href="#"><img src="https://www.gct.co.jp/kyoto/kanko/_src/15474/img20190629222831134997.png" alt=""></a></li>
+  </ul>
+</div>
       </div>
+
     </main>
     <%= render "layouts/footer" %>
   </body>
