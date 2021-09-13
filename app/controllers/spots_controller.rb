@@ -1,6 +1,6 @@
 class SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_q, only: [:index, :search]
   # GET /spots
   def index
     @spots = Spot.all
@@ -44,15 +44,23 @@ class SpotsController < ApplicationController
     @spot.destroy
     redirect_to spots_url, notice: '削除しました'
   end
+  
+  def search
+    @results = @q.result
+  end
 
   private
+  
+  def set_q
+    @q = Spot.ransack(params[:q])
+  end
     # Use callbacks to share common setup or constraints between actions.
-    def set_spot
-      @spot = Spot.find(params[:id])
-    end
+  def set_spot
+    @spot = Spot.find(params[:id])
+  end
 
     # Only allow a trusted parameter "white list" through.
-    def spot_params
-      params.require(:spot).permit(:name, :comment, :address, :tel, :price, :parking, :access, :url, :category)
-    end
+  def spot_params
+    params.require(:spot).permit(:name, :comment, :address, :tel, :price, :parking, :access, :url, :category)
+  end
 end
