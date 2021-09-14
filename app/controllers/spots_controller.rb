@@ -50,7 +50,7 @@ class SpotsController < ApplicationController
   end
 
   private
-  
+
   def set_q
     @q = Spot.ransack(params[:q])
   end
