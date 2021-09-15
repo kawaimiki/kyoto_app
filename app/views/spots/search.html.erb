@@ -3,14 +3,14 @@
   <thead>
     <tr>
       <th>名前</th>
-      <th></th>
+      <th>コメント</th>
       <th>住所</th>
       <th>TEL</th>
       <th>料金</th>
       <th>駐車場</th>
       <th>アクセス</th>
       <th>ホームページ</th>
-      <th></th>
+      <th>カテゴリー</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,7 +24,7 @@
         <td><%= spot.tel %></td>
         <td><%= spot.price %></td>
         <td><%= spot.parking %></td>
-        <td><%= link_to 'Google マップ', spot.url %></td>
+        <td><%= link_to 'Google マップ', spot.access %></td>
         <td><%= link_to 'ホームページ', spot.url %></td>
         <td><%= spot.category %></td>
         <td><%= link_to '閲覧', spot %></td>
