@@ -1,4 +1,4 @@
-<h1>検索結果</h1>
+<h1></h1>
 <table>
   <thead>
     <tr>
@@ -27,9 +27,6 @@
         <td><%= link_to 'Google マップ', spot.access %></td>
         <td><%= link_to 'ホームページ', spot.url %></td>
         <td><%= spot.category %></td>
-        <td><%= link_to '閲覧', spot %></td>
-        <td><%= link_to '編集', edit_spot_path(spot) %></td>
-        <td><%= link_to '削除', spot, method: :delete, data: { confirm: '本当によろしいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
