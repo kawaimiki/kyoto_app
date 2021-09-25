@@ -55,6 +55,11 @@
     <%= form.label :カテゴリー %>
     <%= form.select :category, Spot.categories.keys.to_a, {} %>
   </div>
+  
+  <div class="field">
+  <%= form.label :写真をアップロード %>
+  <%= form.file_field :image %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

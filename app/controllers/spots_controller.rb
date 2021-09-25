@@ -61,6 +61,6 @@ class SpotsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
   def spot_params
-    params.require(:spot).permit(:name, :comment, :address, :tel, :price, :parking, :access, :url, :category)
+    params.require(:spot).permit(:name, :comment, :address, :tel, :price, :parking, :access, :url, :category, :image)
   end
 end

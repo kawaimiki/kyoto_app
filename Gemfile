@@ -71,4 +71,4 @@ gem 'jquery-rails'
 # devise
 gem 'devise', '~> 4.2'
 gem 'ransack'
-gem 'carrierwave'
+gem 'carrierwave', '~> 2.0'
