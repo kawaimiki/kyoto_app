@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<br>
+
+<%= link_to 'New Spot', new_spot_path %>
+
+
+<h2>カテゴリー検索</h2>
+<%= search_form_for @q, url: search_spots_path do |f| %>
+  <%= f.label :category_cont, 'カテゴリー' %>
+  <%= f.search_field :category_cont %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
 <h1></h1>
 
 <table>
@@ -38,14 +51,5 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Spot', new_spot_path %>
 
-<h2>カテゴリー検索</h2>
-<%= search_form_for @q, url: search_spots_path do |f| %>
-  <%= f.label :category_cont, 'カテゴリー' %>
-  <%= f.search_field :category_cont %>
-  <br>
-  <%= f.submit '検索' %>
-<% end %>
