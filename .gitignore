@@ -31,5 +31,4 @@
 /config/master.key
 app/views/spots/_form.html.erb
 /public/uploads
-config/initializers/carrierwave.rb
 /.env
