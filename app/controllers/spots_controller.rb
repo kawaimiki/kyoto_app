@@ -24,7 +24,7 @@ class SpotsController < ApplicationController
     @spot = Spot.new(spot_params)
 
     if @spot.save
-      redirect_to @spot, notice: '作成されました'
+      redirect_to spots_url, notice: '作成されました'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class SpotsController < ApplicationController
   # PATCH/PUT /spots/1
   def update
     if @spot.update(spot_params)
-      redirect_to @spot, notice: '更新されました'
+      redirect_to spots_url, notice: '更新されました'
     else
       render :edit
     end

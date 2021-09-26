@@ -9,9 +9,9 @@ CarrierWave.configure do |config|
     case Rails.env
     when 'development'
         config.fog_directory  = 'kawaimiki'
-        config.asset_host = 'https://s3.amazonaws.com/kawaimiki'
+        config.asset_host = 'https://kawaimiki.s3.amazonaws.com'
     when 'production'
         config.fog_directory  = 'kawaimiki'
-        config.asset_host = 'https://s3.amazonaws.com/kawaimiki'
+        config.asset_host = 'https://kawaimiki.s3.amazonaws.com'
     end
 end
