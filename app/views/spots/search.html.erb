@@ -3,13 +3,13 @@
   <thead>
     <tr>
       <th>名前</th>
+      <th>写真</th>
       <th>コメント</th>
       <th>住所</th>
       <th>TEL</th>
       <th>料金</th>
       <th>駐車場</th>
       <th>アクセス</th>
-      <th>ホームページ</th>
       <th>カテゴリー</th>
     </tr>
   </thead>
@@ -17,14 +17,14 @@
   <tbody>
     <% @results.each do |spot| %>
       <tr>
-        <td><%= spot.name %></td>
+        <td><%= link_to spot.name, spot.url %></td>
+				<td><%= image_tag spot.image.to_s, width: 180 %></td>
         <td><%= spot.comment %></td>
         <td><%= spot.address %></td>
         <td><%= spot.tel %></td>
         <td><%= spot.price %></td>
         <td><%= spot.parking %></td>
         <td><%= link_to 'Google マップ', spot.access %></td>
-        <td><%= link_to 'ホームページ', spot.url %></td>
         <td><%= spot.category %></td>
       </tr>
     <% end %>

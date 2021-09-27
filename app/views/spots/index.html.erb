@@ -19,32 +19,30 @@
   <thead>
     <tr>
       <th>名前</th>
+      <th>写真</th>
       <th>コメント</th>
       <th>住所</th>
       <th>TEL</th>
       <th>料金</th>
       <th>駐車場</th>
       <th>アクセス</th>
-      <th>HP</th>
       <th>カテゴリー</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @spots.each do |spot| %>
       <tr>
-        <td><%= spot.name %></td>
-    
+        <td><%= link_to spot.name, spot.url %></td>
+				<td><%= image_tag spot.image.to_s, width: 180 %></td>
         <td><%= spot.comment %></td>
         <td><%= spot.address %></td>
         <td><%= spot.tel %></td>
         <td><%= spot.price %></td>
         <td><%= spot.parking %></td>
         <td><%= link_to 'Google マップ', spot.access %></td>
-        <td><%= link_to 'HP', spot.url %></td>
         <td><%= spot.category %></td>
-        <td><%= link_to '詳細', spot %></td>
         <td><%= link_to '編集', edit_spot_path(spot) %></td>
         <td><%= link_to '削除', spot, method: :delete, data: { confirm: '本当によろしいですか？' } %></td>
       </tr>

@@ -45,7 +45,12 @@
   <%= @spot.category %>
 </p>
 
-
+<% if @spot.image? %>
+  <p>
+    <strong></strong>
+    <%= image_tag @spot.image.url %><!-- userインスタンスの画像ファイルのURLを取得し表示 -->
+  </p>
+<% end %>
 
 <%= link_to '編集', edit_spot_path(@spot) %> |
 <%= link_to '戻る', spots_path %>
