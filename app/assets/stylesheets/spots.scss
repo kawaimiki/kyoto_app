@@ -47,11 +47,18 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+p { 
+  font-family: verdana;
+  font-size: 13px; //詳細画面
   line-height: 18px;
 }
+
+td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px; //一覧画面
+  line-height: 20px;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
