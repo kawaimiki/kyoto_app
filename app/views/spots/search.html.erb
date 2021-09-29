@@ -1,7 +1,7 @@
 <h1></h1>
 <table>
   <thead>
-    <tr>
+    <tr height="80">
       <th>名前</th>
       <th>写真</th>
       <th>コメント</th>
@@ -17,18 +17,18 @@
   <tbody>
     <% @results.each do |spot| %>
       <tr>
-        <td><%= link_to spot.name, spot.url %></td>
-				<td><%= image_tag spot.image.to_s, width: 180 %></td>
+        <td width="180"><%= link_to spot.name, spot.url %></td>
+				<td><%= image_tag spot.image.to_s, width: 180, hight:100;%></td>
         <td><%= spot.comment %></td>
         <td><%= spot.address %></td>
-        <td><%= spot.tel %></td>
+        <td width="120"><%= spot.tel %></td>
         <td><%= spot.price %></td>
         <td><%= spot.parking %></td>
-        <td><%= link_to 'Google マップ', spot.access %></td>
-        <td><%= spot.category %></td>
+        <td width="115"><%= link_to 'Google マップ', spot.access %></td>
+        <td width="115"><%= spot.category %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Top', spots_path %>
+<%= link_to 'Top', root_path %>
