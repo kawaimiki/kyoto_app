@@ -10,6 +10,7 @@ CarrierWave.configure do |config|
     when 'development'
         config.fog_directory  = 'kawaimiki'
         config.asset_host = 'https://kawaimiki.s3.amazonaws.com'
+        config.fog_public = false
     when 'production'
         config.fog_directory  = 'kawaimiki'
         config.asset_host = 'https://kawaimiki.s3.amazonaws.com'
