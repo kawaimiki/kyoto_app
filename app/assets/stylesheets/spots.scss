@@ -59,24 +59,6 @@ td{
   line-height: 20px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-#notice {
-  color: green;
-}
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -91,15 +73,16 @@ div {
     margin: -7px -7px 0;
     background-color: #c00;
     color: #fff;
+  }  
+  h3 {
+    font-size: 11px;
   }
   ul li {
     font-size: 12px;
     list-style: square;
   }
 }
-label {
-  display: block;
-}
+
 tr.list_line_odd {
 	background: #effeef;
 }
