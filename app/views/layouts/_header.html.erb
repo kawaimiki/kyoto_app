@@ -14,6 +14,7 @@
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=花手水&commit=検索">花手水</a>
   </div><!-- /.dropdown-menu -->
 </div><!-- /.dropdown -->
+
   
   <div class="dropdown">
   <!-- 切替ボタンの設定 -->
@@ -46,10 +47,7 @@
         <li class="nav-item">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "一覧", spots_path, class: "nav-link" %>
-        </li>
-
+        <a class="btn btn-secondary d-block d-md-inline-block mb-2 mb-md-0" href="spots" role="button">一覧</a>
         
       <% else %>
         <li class="nav-item">
