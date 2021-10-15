@@ -9,12 +9,10 @@
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <span>ログインしたままにする</span>
-    </div>
-  <% end %>
+<%= f.label :remember_me, class: "checkbox inline" do %>
+  <%= f.check_box :remember_me %>
+  <span>ログインしたままにする</span>
+<% end %>
 
   <div class="actions">
     <%= f.submit "ログイン" %>
