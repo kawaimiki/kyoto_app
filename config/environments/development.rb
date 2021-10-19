@@ -61,10 +61,10 @@ Rails.application.configure do
 
   # devise の設定
   config.action_mailer.default_url_options = { host: "localhost", port: ENV.fetch("PORT", 3000) }
-  host = "https://sleepy-retreat-66493.herokuapp.com/"
+  config.action_mailer.default_url_options = { host: "https://sleepy-retreat-66493.herokuapp.com"}
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
-    :address => "smtp.gmail.com",
+    :address => ENV['address'],
     :port => 587,
     :domain => 'smtp.gmail.com',
     :user_name => ENV['address'], #gmailアドレス
