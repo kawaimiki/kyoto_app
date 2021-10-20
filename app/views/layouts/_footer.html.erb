@@ -1,1 +1,4 @@
-<a class="btn btn-secondary d-block d-md-inline-block mb-2 mb-md-0" href="spots/users/sign_in" role="button">管理者用</a>
+      <%  if user_signed_in?  %>
+      <% else %>
+        <a class="btn btn-secondary d-block d-md-inline-block mb-2 mb-md-0" href="spots/users/sign_in" role="button">管理者用</a>
+      <% end %>

@@ -33,11 +33,12 @@
       <%  if user_signed_in?  %>
         <a class="btn btn-secondary d-block d-md-inline-block mb-2 mb-md-0" href="spots" role="button">一覧</a>
 
-        <ul class="nav-item">
+        <ul class="nav justify-content-end">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </ul>
 
       <% else %>
+
       <% end %>
     </ul>
   </div>
