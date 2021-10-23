@@ -92,4 +92,14 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: "https://sleepy-retreat-66493.herokuapp.com"}
+  config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => ENV['address'],
+  :port => 587,
+  :domain => 'smtp.gmail.com',
+  :user_name => ENV['address'], #gmailアドレス
+  :password => ENV['password'], #gmailパスワード
+  :authentication => 'login',
+  }
+
 end
