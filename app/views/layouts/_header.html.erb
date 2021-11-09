@@ -1,13 +1,13 @@
 <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <%= link_to 'KYOTO', root_path, class: "navbar-brand" %>
   
-  <div class="dropdown">
+  <div class="btn-group">
   <!-- 切替ボタンの設定 -->
-  <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     インスタ映え
   </button>
   <!-- ドロップメニューの設定 -->
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu">
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=カラフル&commit=検索">カラフル</a>
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=動物みくじ&commit=検索">動物みくじ</a>
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=水占い&commit=検索">水占い</a>
@@ -15,14 +15,13 @@
   </div><!-- /.dropdown-menu -->
 </div><!-- /.dropdown -->
 
-  
-  <div class="dropdown">
+  <div class="btn-group">
   <!-- 切替ボタンの設定 -->
-  <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     楽しめる
   </button>
   <!-- ドロップメニューの設定 -->
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-menu">
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=雨の日&commit=検索">雨の日</a>
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=子ども&commit=検索">子ども</a>
     <a class="dropdown-item" href="https://sleepy-retreat-66493.herokuapp.com/spots/search?utf8=✓&q%5Bcategory_cont%5D=車椅子&commit=検索">車椅子</a>
@@ -32,7 +31,6 @@
     
       <%  if user_signed_in?  %>
         <a class="btn btn-secondary d-block d-md-inline-block mb-2 mb-md-0" href="spots" role="button">一覧</a>
-
         <ul class="nav justify-content-end">
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </ul>
