@@ -10,15 +10,20 @@
   <tbody>
     <% @results.each do |spot| %>
       <tr>
-				<td><%= image_tag spot.image.to_s, width: 300, hight:200;%></td>
+				<td>
+				  <br>
+				  <%= image_tag spot.image.to_s, width: 250, hight:200;%>
+				  <p>
+				  <br>
+				  <% if spot.url? %>
+          <%= link_to spot.name, spot.url %>
+          <% else %>
+          <%= spot.name %>
+          <% end %>
+          </p>
+				</td>
 
         <td>
-        <h2><% if spot.url? %>
-          <%= link_to spot.name, spot.url %>
-        <% else %>
-          <%= spot.name %>
-        <% end %>
-        </h2>
         <p><%= spot.comment %></p>
         <p>住所：<%= spot.address %></p>
         <p>
