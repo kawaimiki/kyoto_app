@@ -5,35 +5,32 @@
 
 <table>
   <thead>
-    <tr height="80">
-      <th>名前</th>
-      <th>写真</th>
-      <th>コメント</th>
-      <th>住所</th>
-      <th>TEL</th>
-      <th>料金</th>
-      <th>駐車場</th>
-      <th>アクセス</th>
-    </tr>
   </thead>
 
   <tbody>
     <% @results.each do |spot| %>
       <tr>
-        <td width="180">
-        <% if spot.url? %>
+				<td><%= image_tag spot.image.to_s, width: 300, hight:200;%></td>
+
+        <td>
+        <h2><% if spot.url? %>
           <%= link_to spot.name, spot.url %>
         <% else %>
           <%= spot.name %>
-        <% end %>        
+        <% end %>
+        </h2>
+        <p><%= spot.comment %></p>
+        <p>住所：<%= spot.address %></p>
+        <p>
+         <% if spot.tel? %>
+          TEL:<%= spot.tel %>
+       　 <% else %>
+         <% end %>
+        </p>
+        <p>料金：<%= spot.price %></p>
+        <p>駐車場：<%= spot.parking %></p>
+        <p><%= link_to 'Google マップ', spot.access %></p>
         </td>
-				<td><%= image_tag spot.image.to_s, width: 180, hight:100;%></td>
-        <td><%= spot.comment %></td>
-        <td><%= spot.address %></td>
-        <td width="120"><%= spot.tel %></td>
-        <td><%= spot.price %></td>
-        <td><%= spot.parking %></td>
-        <td width="115"><%= link_to 'Google マップ', spot.access %></td>
       </tr>
     <% end %>
   </tbody>
