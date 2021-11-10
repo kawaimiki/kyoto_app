@@ -38,8 +38,7 @@ table tr:last-child td {
   box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
 }
 
-  h3 {
-  font-size: 12px;
+  h5 {
   text-align: left;
   color: #6594e0;/*文字色*/
   /*線の種類（点線）2px 線色*/
@@ -110,3 +109,22 @@ td.description {
 		font-size: 1.4em;
 	}	
 }
+
+@media screen and (max-width: 640px) {
+  td {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+
+  th,
+  td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    font-size: 10px;
+  } 
+}
+ 
