@@ -15,8 +15,8 @@
 <table>
   <thead>
     <tr height="80">
-      <th>名前</th>
       <th>写真</th>
+      <th>名前</th>
       <th>コメント</th>
       <th>住所</th>
       <th>TEL</th>
@@ -31,6 +31,7 @@
   <tbody>
     <% @spots.each do |spot| %>
       <tr>
+				<td><%= image_tag spot.image.to_s, width: 180, hight:100;%></td>
         <td width="180">
         <% if spot.url? %>
           <%= link_to spot.name, spot.url %>
@@ -38,7 +39,6 @@
           <%= spot.name %>
         <% end %>
           </td>
-				<td><%= image_tag spot.image.to_s, width: 180, hight:100;%></td>
         <td><%= spot.comment %></td>
         <td><%= spot.address %></td>
         <td width="120"><%= spot.tel %></td>

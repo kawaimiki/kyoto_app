@@ -38,11 +38,13 @@ table tr:last-child td {
   box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
 }
 
-  h5 {
+  .p1 {
   text-align: left;
   color: #6594e0;/*文字色*/
   /*線の種類（点線）2px 線色*/
+  padding: 0.5em;
   border-bottom: dashed 2px #6594e0;
+  font-size: 20px;
   }
 
 body {
@@ -116,15 +118,23 @@ td.description {
     width: 100%;
   }
 
-  th,
   td {
 　　border-bottom: none;
     display: block;
     width: 100%;
   }
 
+  th {
+        display: none;
+  }
+
   p {
     font-size: 10px;
   } 
+  
+  .p1 {
+    font-size: 14px;
+  }
+  
 }
  
