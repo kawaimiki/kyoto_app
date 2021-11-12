@@ -46,7 +46,7 @@ class SpotsController < ApplicationController
   end
   
   def search
-    @results = @q.result
+    @results = @q.result(distinct: true)
   end
 
   private
