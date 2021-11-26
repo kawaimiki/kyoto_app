@@ -8,8 +8,9 @@
 ## URL
 <https://sleepy-retreat-66493.herokuapp.com/>
 * 常時SSL化。
-* ログイン出来ます。 password：kyoto1973
+* ログイン出来ます。 password：kyoto1111
 * レスポンシブデザイン対応。
 
 ## 目指した課題解決
-* 
+* 観光場所を検索する。
+* 自分が知りたい情報を簡単に知ることができる。
