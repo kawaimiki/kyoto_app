@@ -30,4 +30,9 @@
 ## バックエンド
 * Ruby 2.6.6
 * Rails 5.2.6
-* 
+* RSpec（テスト）
+* Puma
+
+## フロントエンド
+* HTML/CSS
+* Javascript
